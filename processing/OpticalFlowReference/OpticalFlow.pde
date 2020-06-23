@@ -2,7 +2,7 @@ import gab.opencv.*;
 
 OpenCV opencv;
 int levelOfDetails = 2;
-int videoScale = 4;
+int videoScale = 8;
 int videoWidth, videoHeight;
 PImage motionTexture;
 PShader shaderBuffer;
@@ -84,12 +84,7 @@ void opticalFlowDraw() {
 
   // draw final render
   tex.beginDraw();
-  int r = int(random(48, 64));
-  int g = int(random(120, 128));
-  int b = int(random(32, 64));
-  tex.tint(r, g, b);
   tex.image(bufferWrite, 0, 0, tex.width, tex.height);
-  tex.noTint();
   tex.endDraw();  
   
 }
